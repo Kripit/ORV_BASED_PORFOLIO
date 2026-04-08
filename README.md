@@ -1,25 +1,38 @@
 # ORV Based Portfolio
 
-A personal portfolio project built for fun, inspired by Omniscient Reader's Viewpoint (ORV).
+This is my personal portfolio project, built with an ORV-inspired visual style.
 
-It combines a cinematic anime-style visual direction with a practical developer portfolio structure.
+I wanted it to feel cinematic and fun, but still usable as a real portfolio. The final version keeps that balance: strong theme, clean layout, and practical structure.
 
-## What this project includes
+## What I built
 
-- ORV-inspired UI theme and typography
-- Anime-style live wallpaper atmosphere
+- ORV-inspired design language with dark neon visuals
+- Anime-style live wallpaper atmosphere and particle effects
 - Floating Dokkaebii chatbot
-- Particle background effects
-- Multi-page layout: Home, About, Projects, Resume
-- Responsive design across desktop and mobile
+- Multi-page structure: Home, About, Projects, Resume
+- Responsive UI for desktop and mobile
 
-## Stack
+## Tech used
 
 - React
 - Vite
 - Tailwind CSS
 - React Router
 - Framer Motion
+
+## Problems I faced
+
+- Hero section became too crowded and looked more like a gallery than a landing page
+- Text hierarchy was inconsistent between sections
+- Chatbot key handling needed clearer behavior between local and runtime usage
+- Large media files caused repository push issues
+
+## How I solved them
+
+- Reworked the homepage to a cleaner composition with controlled media usage
+- Standardized typography and spacing for readability
+- Improved API key flow for the chatbot and environment-based setup
+- Removed oversized video assets from git tracking to satisfy GitHub limits
 
 ## Run locally
 
@@ -28,13 +41,13 @@ npm install
 npm run dev
 ```
 
-Production build:
+Build for production:
 
 ```bash
 npm run build
 ```
 
-## Environment variable
+## Environment setup
 
 Create a `.env` file in the project root:
 
@@ -42,16 +55,16 @@ Create a `.env` file in the project root:
 VITE_ANTHROPIC_API_KEY=your_key_here
 ```
 
-## Main content file
+## Where to edit content
 
-Update profile data here:
+Profile/project data lives in:
 
 - `src/data/portfolio.js`
 
-This controls name, bio, skills, projects, experience, education, and links.
+This file controls name, bio, skills, projects, experience, education, and links.
 
-## Deployment
+## Deploy
 
-Deploy the `dist` output to any static host (Vercel, Netlify, etc.).
+Deploy the `dist` folder to any static host (Vercel, Netlify, etc.).
 
-If you want chatbot support in production, set `VITE_ANTHROPIC_API_KEY` in your hosting environment variables.
+If chatbot support is needed in production, set `VITE_ANTHROPIC_API_KEY` in your hosting environment variables.
